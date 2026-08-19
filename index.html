@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karen Pearl Ong — Operations Lead & Systems Builder</title>
-    <meta name="description" content="Operations Lead and systems builder for early-stage startups. I help founders turn chaos into process — SOPs, workflows, AI-powered internal tools, and remote teams that actually run themselves.">
+    <title>Karen Pearl Ong — Operations, SEO, and internal tools</title>
+    <meta name="description" content="Most recently Operations Lead at an AI search startup. Ran content programs for 15 clients, published 250 blogs with 119 ranking inside two weeks, and built the internal dashboards the team worked out of.">
+    <meta property="og:title" content="Karen Pearl Ong — Operations, SEO, and internal tools">
+    <meta property="og:description" content="Operations, SEO and internal tools. 250 blogs published, 119 ranked in two weeks. I built the dashboards the team worked out of.">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* ========== CSS VARIABLES ========== */
         :root {
-            /* Minimalist palette — near-black, off-white, single muted accent */
-            --ink: #0a0a0a;             /* near black */
-            --ink-soft: #2a2a2a;        /* charcoal */
-            --ink-mid: #5a5a55;         /* soft gray */
+            /* Unified palette — deep purple-black + neon orange accent */
+            --ink: #0a0614;             /* deep purple-black (dark sections) */
+            --ink-soft: #1a1130;        /* raised dark surface */
+            --ink-mid: #5a5a55;         /* soft gray text */
             --cream: #ffffff;           /* pure white */
-            --cream-warm: #f5f5f5;      /* neutral light gray */
-            --blush: #e5e5e5;           /* neutral border */
-            --peach: #999999;           /* neutral mid gray */
-            --coral: #b56b4a;           /* terracotta (single accent) */
-            --lavender: #e5e5e5;        /* neutral */
-            --plum: #8a5a3a;            /* deeper terracotta */
-            --plum-deep: #0a0a0a;       /* near-black panels */
-            --mint: #e5e5e5;            /* neutral */
+            --cream-warm: #f7f5fa;      /* off-white with hint of lavender */
+            --blush: #ece8f2;           /* soft neutral border */
+            --peach: #ff8c42;           /* lighter neon orange */
+            --coral: #ff6b1a;           /* NEON ORANGE accent */
+            --lavender: #ece8f2;        /* neutral */
+            --plum: #ff5e00;            /* deeper neon orange */
+            --plum-deep: #0a0614;       /* deep purple-black panels */
+            --mint: #ece8f2;            /* neutral */
             --sage: #7a7a7a;            /* neutral gray */
 
             /* Semantic remaps for legacy vars */
@@ -34,13 +37,13 @@
             --light-mid: var(--cream-warm);
             --white: #ffffff;
             --teal: var(--coral);
-            --teal-dark: #e85a3f;
+            --teal-dark: #ff5e00;
             --orange: var(--plum);
-            --orange-light: var(--lavender);
-            --gray-400: #9b94aa;
+            --orange-light: var(--peach);
+            --gray-400: #9b8bb8;
             --gray-500: #6f6878;
             --gray-600: #4d4658;
-            --gray-700: var(--ink-soft);
+            --gray-700: #2a2a2a;
             --gray-800: var(--ink);
 
             /* Glass tokens */
@@ -123,11 +126,15 @@
 
         /* ========== ANIMATIONS ========== */
         .reveal {
-            opacity: 0;
-            transform: translateY(40px);
+            opacity: 1;
+            transform: none;
             transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
         }
-        .reveal.visible {
+        html.js-reveal .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        html.js-reveal .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -141,8 +148,8 @@
             50% { transform: translateY(-12px); }
         }
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 170, 0.15); }
-            50% { box-shadow: 0 0 40px rgba(0, 212, 170, 0.3); }
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 26, 0.15); }
+            50% { box-shadow: 0 0 40px rgba(255, 107, 26, 0.3); }
         }
         @keyframes gradient-shift {
             0% { background-position: 0% 50%; }
@@ -234,7 +241,7 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 107, 26, 0.08) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -245,7 +252,7 @@
             left: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.06) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 140, 66, 0.06) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -260,8 +267,8 @@
             position: absolute;
             inset: 0;
             background-image:
-                linear-gradient(rgba(0, 212, 170, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 212, 170, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(255, 107, 26, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 107, 26, 0.03) 1px, transparent 1px);
             background-size: 60px 60px;
             pointer-events: none;
         }
@@ -322,8 +329,8 @@
             gap: 10px;
             padding: 8px 16px;
             margin-bottom: 28px;
-            background: rgba(0, 212, 170, 0.08);
-            border: 1px solid rgba(0, 212, 170, 0.25);
+            background: rgba(255, 107, 26, 0.08);
+            border: 1px solid rgba(255, 107, 26, 0.25);
             border-radius: 50px;
             font-size: 0.88rem;
             color: var(--white);
@@ -358,7 +365,7 @@
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.35);
+            box-shadow: 0 8px 30px rgba(255, 107, 26, 0.35);
         }
         .btn-outline {
             background: transparent;
@@ -406,7 +413,7 @@
             right: -40px;
             width: 80px;
             height: 80px;
-            border: 2px solid rgba(0, 212, 170, 0.2);
+            border: 2px solid rgba(255, 107, 26, 0.2);
             border-radius: 16px;
             transform: rotate(45deg);
             animation: float 6s ease-in-out infinite;
@@ -418,7 +425,7 @@
             left: -30px;
             width: 50px;
             height: 50px;
-            background: rgba(255, 107, 53, 0.1);
+            background: rgba(255, 140, 66, 0.1);
             border-radius: 50%;
             animation: float 5s ease-in-out infinite 1s;
             z-index: 0;
@@ -485,7 +492,7 @@
             border-color: var(--teal);
             color: var(--teal);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.1);
+            box-shadow: 0 4px 15px rgba(255, 107, 26, 0.1);
         }
         .tools-section { margin-top: 40px; }
         .tools-title {
@@ -558,7 +565,7 @@
             transform: translateX(-50%);
             width: 1px;
             height: 100%;
-            background: linear-gradient(to bottom, transparent, rgba(0, 212, 170, 0.15), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(255, 107, 26, 0.15), transparent);
             pointer-events: none;
         }
         .timeline {
@@ -591,7 +598,7 @@
             height: 14px;
             border-radius: 50%;
             background: var(--teal);
-            box-shadow: 0 0 20px rgba(0, 212, 170, 0.4);
+            box-shadow: 0 0 20px rgba(255, 107, 26, 0.4);
         }
         .timeline-date {
             font-family: var(--font-display);
@@ -722,8 +729,8 @@
             justify-content: center;
             font-size: 1.8rem;
         }
-        .work-link-icon.teal { background: rgba(0, 212, 170, 0.1); color: var(--teal); }
-        .work-link-icon.orange { background: rgba(255, 107, 53, 0.1); color: var(--orange); }
+        .work-link-icon.teal { background: rgba(255, 107, 26, 0.1); color: var(--teal); }
+        .work-link-icon.orange { background: rgba(255, 140, 66, 0.1); color: var(--orange); }
         .work-link-icon.blue { background: rgba(99, 102, 241, 0.1); color: #6366f1; }
         .work-link-title {
             font-family: var(--font-display);
@@ -784,7 +791,7 @@
             font-weight: 700;
             padding: 4px 12px;
             border-radius: 50px;
-            background: rgba(0, 212, 170, 0.1);
+            background: rgba(255, 107, 26, 0.1);
             color: var(--teal);
             margin-left: 8px;
         }
@@ -792,8 +799,8 @@
         /* Featured testimonial */
         .testimonial-card.featured {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, rgba(0, 212, 170, 0.08), rgba(255, 107, 53, 0.06)), var(--dark-light);
-            border: 1px solid rgba(0, 212, 170, 0.25);
+            background: linear-gradient(135deg, rgba(255, 107, 26, 0.08), rgba(255, 140, 66, 0.06)), var(--dark-light);
+            border: 1px solid rgba(255, 107, 26, 0.25);
             padding: 44px 40px;
         }
         .testimonial-card.featured .testimonial-text {
@@ -814,7 +821,7 @@
             text-transform: uppercase;
             padding: 5px 12px;
             border-radius: 50px;
-            background: rgba(0, 212, 170, 0.15);
+            background: rgba(255, 107, 26, 0.15);
             color: var(--teal);
             margin-bottom: 18px;
         }
@@ -834,7 +841,7 @@
             font-family: var(--font-display);
             font-size: 20rem;
             font-weight: 800;
-            color: rgba(0, 212, 170, 0.03);
+            color: rgba(255, 107, 26, 0.03);
             line-height: 1;
             pointer-events: none;
         }
@@ -854,7 +861,7 @@
         }
         .testimonial-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(0, 212, 170, 0.2);
+            border-color: rgba(255, 107, 26, 0.2);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
         .testimonial-card::before {
@@ -923,7 +930,7 @@
             left: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 140, 66, 0.05) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -944,7 +951,7 @@
         }
         .team-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(0, 212, 170, 0.15);
+            border-color: rgba(255, 107, 26, 0.15);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
         .team-card-label {
@@ -959,11 +966,11 @@
             margin-bottom: 20px;
         }
         .team-card-label.seo {
-            background: rgba(0, 212, 170, 0.1);
+            background: rgba(255, 107, 26, 0.1);
             color: var(--teal);
         }
         .team-card-label.social {
-            background: rgba(255, 107, 53, 0.1);
+            background: rgba(255, 140, 66, 0.1);
             color: var(--orange);
         }
         .team-card-quote {
@@ -1016,11 +1023,11 @@
             transform: translateY(-2px);
         }
         .team-member-chip.clickable.selected {
-            background: rgba(0, 212, 170, 0.15);
+            background: rgba(255, 107, 26, 0.15);
             border-color: var(--teal);
         }
         .team-card[data-has-social] .team-member-chip.clickable.selected {
-            background: rgba(255, 107, 53, 0.15);
+            background: rgba(255, 140, 66, 0.15);
             border-color: var(--orange);
         }
         .team-quote-display {
@@ -1100,7 +1107,7 @@
             width: 48px;
             height: 48px;
             border-radius: 12px;
-            background: rgba(0, 212, 170, 0.1);
+            background: rgba(255, 107, 26, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1152,7 +1159,7 @@
         }
         .form-input:focus, .form-textarea:focus {
             border-color: var(--teal);
-            box-shadow: 0 0 0 4px rgba(0, 212, 170, 0.1);
+            box-shadow: 0 0 0 4px rgba(255, 107, 26, 0.1);
             background: var(--white);
         }
         .form-textarea { min-height: 140px; resize: vertical; }
@@ -1172,7 +1179,7 @@
         }
         .form-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 212, 170, 0.35);
+            box-shadow: 0 8px 30px rgba(255, 107, 26, 0.35);
         }
 
         /* ========== FOOTER ========== */
@@ -1287,7 +1294,7 @@
             position: absolute;
             top: -20%; left: -10%;
             width: 60%; height: 140%;
-            background: radial-gradient(ellipse at center, rgba(0, 212, 170, 0.12), transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(255, 107, 26, 0.12), transparent 60%);
             pointer-events: none;
         }
         .geo::after {
@@ -1295,7 +1302,7 @@
             position: absolute;
             bottom: -30%; right: -15%;
             width: 55%; height: 140%;
-            background: radial-gradient(ellipse at center, rgba(255, 107, 53, 0.1), transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(255, 140, 66, 0.1), transparent 60%);
             pointer-events: none;
         }
         .geo-inner { position: relative; z-index: 1; }
@@ -1303,8 +1310,8 @@
         .geo-tag {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 6px 14px;
-            background: rgba(0, 212, 170, 0.12);
-            border: 1px solid rgba(0, 212, 170, 0.3);
+            background: rgba(255, 107, 26, 0.12);
+            border: 1px solid rgba(255, 107, 26, 0.3);
             color: var(--teal);
             font-family: var(--font-display);
             font-size: 0.72rem;
@@ -1432,8 +1439,8 @@
         .geo-placeholder {
             margin-top: 22px;
             padding: 18px 20px;
-            background: rgba(0, 212, 170, 0.06);
-            border: 1px dashed rgba(0, 212, 170, 0.3);
+            background: rgba(255, 107, 26, 0.06);
+            border: 1px dashed rgba(255, 107, 26, 0.3);
             border-radius: 14px;
             font-size: 0.85rem;
             color: var(--gray-400);
@@ -1442,8 +1449,8 @@
         .geo-edge {
             margin-top: 70px;
             padding: 36px 40px;
-            background: linear-gradient(135deg, rgba(0, 212, 170, 0.08), rgba(255, 107, 53, 0.05));
-            border: 1px solid rgba(0, 212, 170, 0.2);
+            background: linear-gradient(135deg, rgba(255, 107, 26, 0.08), rgba(255, 140, 66, 0.05));
+            border: 1px solid rgba(255, 107, 26, 0.2);
             border-radius: 24px;
             display: flex;
             gap: 24px;
@@ -1494,7 +1501,7 @@
         .service-card.featured {
             background: var(--dark);
             color: var(--white);
-            border: 1px solid rgba(0, 212, 170, 0.3);
+            border: 1px solid rgba(255, 107, 26, 0.3);
             transform: translateY(-12px);
             box-shadow: 0 30px 60px rgba(10, 15, 28, 0.18);
         }
@@ -1569,7 +1576,7 @@
             flex-shrink: 0;
             width: 22px; height: 22px;
             border-radius: 50%;
-            background: rgba(0, 212, 170, 0.12);
+            background: rgba(255, 107, 26, 0.12);
             color: var(--teal);
             display: flex; align-items: center; justify-content: center;
             font-size: 0.75rem;
@@ -1593,7 +1600,7 @@
             background: var(--teal);
             color: var(--dark);
         }
-        .service-card.featured .service-cta:hover { box-shadow: 0 14px 30px rgba(0, 212, 170, 0.35); }
+        .service-card.featured .service-cta:hover { box-shadow: 0 14px 30px rgba(255, 107, 26, 0.35); }
         .services-note {
             text-align: center;
             margin-top: 50px;
@@ -1788,7 +1795,7 @@
             top: -120px; right: -120px;
             width: 380px; height: 380px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 212, 170, 0.18), transparent 70%);
+            background: radial-gradient(circle, rgba(255, 107, 26, 0.18), transparent 70%);
         }
         .audience::after {
             content: '';
@@ -1796,7 +1803,7 @@
             bottom: -100px; left: -80px;
             width: 320px; height: 320px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 107, 53, 0.15), transparent 70%);
+            background: radial-gradient(circle, rgba(255, 140, 66, 0.15), transparent 70%);
         }
         .audience-inner { position: relative; z-index: 1; }
         .audience-header { max-width: 760px; margin-bottom: 60px; }
@@ -1816,14 +1823,14 @@
             transition: background .3s var(--ease-out), border-color .3s var(--ease-out);
         }
         .audience-item:hover {
-            background: rgba(0, 212, 170, 0.06);
-            border-color: rgba(0, 212, 170, 0.3);
+            background: rgba(255, 107, 26, 0.06);
+            border-color: rgba(255, 107, 26, 0.3);
         }
         .audience-check {
             flex-shrink: 0;
             width: 38px; height: 38px;
             border-radius: 50%;
-            background: rgba(0, 212, 170, 0.15);
+            background: rgba(255, 107, 26, 0.15);
             color: var(--teal);
             display: flex; align-items: center; justify-content: center;
             font-size: 1.1rem;
@@ -1844,8 +1851,8 @@
         .audience-cta {
             text-align: center;
             padding: 40px;
-            background: rgba(0, 212, 170, 0.08);
-            border: 1px solid rgba(0, 212, 170, 0.25);
+            background: rgba(255, 107, 26, 0.08);
+            border: 1px solid rgba(255, 107, 26, 0.25);
             border-radius: 24px;
         }
         .audience-cta p {
@@ -1867,7 +1874,7 @@
             font-size: 0.95rem;
             transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out);
         }
-        .audience-cta .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0, 212, 170, 0.35); }
+        .audience-cta .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(255, 107, 26, 0.35); }
         @media (max-width: 700px) {
             .audience-grid { grid-template-columns: 1fr; }
             .audience-cta p { font-size: 1.15rem; }
@@ -2551,6 +2558,8 @@
         }
 
         html, body {
+            overflow-x: hidden;
+            max-width: 100%;
             background: linear-gradient(165deg, #140a24 0%, #0f0a1c 45%, #0a0614 100%) !important;
             background-attachment: fixed !important;
             color: var(--ink) !important;
@@ -3145,14 +3154,11 @@
         <a href="#" class="nav-logo">K<span>.</span>Pearl</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
-            <li><a href="#content">Content</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#chapters">Background</a></li>
+            <li><a href="#values">How I work</a></li>
+            <li><a href="#highlights">Results</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="#contact">Connect</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -3167,31 +3173,30 @@
     <div class="container">
         <div class="hero-inner">
             <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Karen Pearl <span class="accent">Ong</span></h1>
-                <p class="hero-role">Operations Lead · Systems Builder · Problem Solver</p>
-                <p class="hero-desc">I help early-stage startups build the operational backbone they're missing. Hand me the chaos, and I'll hand you back SOPs, clean workflows, a team that runs without you, and the internal tools to keep it all moving.</p>
+                <p class="hero-greeting">Karen Pearl Ong</p>
+                <h1 class="hero-name">Ops, SEO, and the<br><span class="accent">tools</span> in between.</h1>
+                <p class="hero-role">Most recently Operations Lead at an AI search startup</p>
+                <p class="hero-desc">I ran the content programs for 15 clients — keywords, briefs, publishing, tracking, and the people doing the work. When the spreadsheets stopped holding up I built the thing that replaced them. 250 blogs out the door, 119 of them ranking inside two weeks, and a dashboard the team opened every morning.</p>
                 <div class="hero-availability">
                     <span class="hero-availability-dot"></span>
-                    <span>Open to full-time remote roles · <strong>$20/hr</strong></span>
+                    <span>Available for new work · <strong>$20/hr</strong> · US hours</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#work" class="btn btn-primary">See How I Work →</a>
-                    <a href="services.html" class="btn btn-outline">Services & Pricing</a>
-                    <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                    <a href="#contact" class="btn btn-primary">Get in touch →</a>
+                    <a href="#chapters" class="btn btn-outline">Background</a>
                 </div>
                 <div class="hero-stats">
                     <div>
-                        <div class="hero-stat-number">5<span>+</span></div>
-                        <div class="hero-stat-label">Years Experience</div>
+                        <div class="hero-stat-number" data-count="250">0</div>
+                        <div class="hero-stat-label">Blogs published</div>
                     </div>
                     <div>
-                        <div class="hero-stat-number">30<span>+</span></div>
-                        <div class="hero-stat-label">Workflows Built</div>
+                        <div class="hero-stat-number" data-count="119">0</div>
+                        <div class="hero-stat-label">Ranked in 2 weeks</div>
                     </div>
                     <div>
-                        <div class="hero-stat-number">3<span>×</span></div>
-                        <div class="hero-stat-label">Startup Ops Teams Led</div>
+                        <div class="hero-stat-number">4<span>+</span></div>
+                        <div class="hero-stat-label">Internal tools built</div>
                     </div>
                 </div>
             </div>
@@ -3211,11 +3216,12 @@
     <div class="container">
         <div class="about-inner">
             <div class="about-text reveal">
-                <div class="section-label">About Me</div>
-                <h2 class="section-title dark">I build systems that make<br>startups run smoother.</h2>
-                <p>Most early-stage companies don't have an ops problem because they're failing. They have one because they're growing too fast for the duct tape to hold. That's where I come in. I find the bottlenecks, write the SOPs nobody had time to write, and build the workflows that let founders stop being the bottleneck themselves.</p>
-                <p>Most recently I built and shipped an internal Operations Dashboard in React and Supabase, covering Reddit ops, blog content production, and SEO tracking in one place, replacing a tangle of spreadsheets for an AI search startup. Before that, at Cascade Web Solutions, I started as the first VA hire and grew into the senior manager keeping 30+ accounts on rails, hiring, onboarding, training, SOPs, client comms, the whole backend of the agency.</p>
-                <p>You focus on growth. I'll build the backend that keeps it running.</p>
+                <div class="section-label">About</div>
+                <h2 class="section-title dark">What I actually do.</h2>
+                <p>I started as a VA at an SEO agency and left a few years later running 30+ accounts. Audits, on-page, local, GBP, schema. The boring parts, not the strategy deck version.</p>
+                <p>Then operations at an AI search startup. 15 clients, their whole content workflow, and the contractors behind it. 250 blogs published. 119 ranked inside two weeks.</p>
+                <p>My first week there I built a React and Supabase dashboard because tracking lived in six spreadsheets nobody trusted. The team switched and never went back. Three more apps followed.</p>
+                <p>I'm not a developer by training. I'm just good at working out what needs to exist, then making it exist.</p>
             </div>
             <div class="reveal reveal-delay-2">
                 <div class="tools-title">Core Skills</div>
@@ -3258,579 +3264,697 @@
     </div>
 </section>
 
+<!-- ========== CHAPTERS ========== -->
+<section class="chapters" id="chapters">
+    <div class="container">
+        <div class="ch-header reveal">
+            <div class="hl-eyebrow"><span></span> Background</div>
+            <h2 class="ch-title">Two roles, and<br>the same problem in both.</h2>
+            <p class="ch-lead">Find what's slowing everyone down, go fix it, then write down how so it stays fixed.</p>
+        </div>
+
+        <div class="ch-list">
+            <article class="ch-item reveal">
+                <div class="ch-index">01</div>
+                <div class="ch-body">
+                    <div class="ch-when">Previous</div>
+                    <h3 class="ch-name">Operations Manager, SEO agency</h3>
+                    <p>Hired as their first VA. Left running 30+ client accounts and the team behind them. Hiring, training, QA, client calls, and every SOP the team worked off.</p>
+                </div>
+                <div class="ch-stat"><strong>30+</strong><span>Client accounts</span></div>
+            </article>
+
+            <article class="ch-item reveal">
+                <div class="ch-index">02</div>
+                <div class="ch-body">
+                    <div class="ch-when">Most recent</div>
+                    <h3 class="ch-name">AEO/GEO & Technical Ops Lead, AI Startup</h3>
+                    <p>Owned blog delivery and AEO/GEO strategy for 15 clients — 250 blogs published, 119 ranked within two weeks, 61% win rate. Also handled integrations (OAuth, API keys), site imports (Webflow, Framer, Wix), and first-line customer support with prod debugging.</p>
+                </div>
+                <div class="ch-stat"><strong>119</strong><span>Ranked in 14 days</span></div>
+            </article>
+
+            <article class="ch-item reveal">
+                <div class="ch-index">03</div>
+                <div class="ch-body">
+                    <div class="ch-when">Throughout</div>
+                    <h3 class="ch-name">Internal tools</h3>
+                    <p>React, Supabase, Vercel, built with Cursor and Claude. Started with one dashboard to kill six spreadsheets. Four apps ended up in production and none of them needed me watching.</p>
+                </div>
+                <div class="ch-stat"><strong>4</strong><span>Apps in production</span></div>
+            </article>
+        </div>
+    </div>
+</section>
+
 <!-- ========== HOW I WORK ========== -->
-<section class="process" id="process">
+<section class="values" id="values">
     <div class="container">
-        <div class="process-header reveal">
-            <div class="section-label">How I Work</div>
-            <h2 class="section-title dark">From chaos to<br>systems that run themselves.</h2>
-            <p class="process-sub">Every engagement follows the same backbone. Five steps, in order, so nothing gets skipped and nothing gets lost.</p>
+        <div class="ch-header reveal">
+            <div class="hl-eyebrow"><span></span> How I work</div>
+            <h2 class="ch-title">A few things I'm<br>stubborn about.</h2>
         </div>
-        <div class="process-timeline">
-            <div class="process-step reveal">
-                <div class="process-number">01</div>
-                <span class="process-icon">🔍</span>
-                <h4>Discovery</h4>
-                <p>Sit inside the chaos with you. Map current workflows, tools, handoffs, and who actually does what.</p>
+        <div class="val-grid">
+            <div class="val-card reveal">
+                <div class="val-num">01</div>
+                <h3>No temporary fixes</h3>
+                <p>If something is duct tape I'll call it duct tape. I'd rather lose a day building it properly than spend a month unpicking it later.</p>
             </div>
-            <div class="process-step reveal reveal-delay-1">
-                <div class="process-number">02</div>
-                <span class="process-icon">📊</span>
-                <h4>Audit</h4>
-                <p>Identify bottlenecks, silent failures, duplicate work, and the gaps where things keep slipping through.</p>
+            <div class="val-card reveal">
+                <div class="val-num">02</div>
+                <h3>Track it or it didn't happen</h3>
+                <p>Every campaign I ran had a number attached to it. If I can't show you what moved, I assume nothing did.</p>
             </div>
-            <div class="process-step reveal reveal-delay-2">
-                <div class="process-number">03</div>
-                <span class="process-icon">⚙️</span>
-                <h4>Build</h4>
-                <p>Create SOPs, dashboards, automations, and the lightweight systems that turn process into infrastructure.</p>
+            <div class="val-card reveal">
+                <div class="val-num">03</div>
+                <h3>I'll tell you what's broken</h3>
+                <p>Including when it's your process, or something I set up myself. I'd rather have the awkward conversation early than explain a bad quarter later.</p>
             </div>
-            <div class="process-step reveal reveal-delay-3">
-                <div class="process-number">04</div>
-                <span class="process-icon">🎯</span>
-                <h4>Train</h4>
-                <p>Onboard the team, document everything in Loom and writing, and make sure the system survives without me.</p>
+            <div class="val-card reveal">
+                <div class="val-num">04</div>
+                <h3>Learn it on the job</h3>
+                <p>React, schema markup, AI search optimization. None of it was on my resume before a project needed it.</p>
             </div>
-            <div class="process-step reveal reveal-delay-4">
-                <div class="process-number">05</div>
-                <span class="process-icon">🤝</span>
-                <h4>Handoff</h4>
-                <p>You own it. I stay available for support, iteration, and the next thing that needs untangling.</p>
+            <div class="val-card reveal">
+                <div class="val-num">05</div>
+                <h3>Good ops is boring</h3>
+                <p>Nothing on fire, nobody chasing anybody for a status update. That's what I'm going for. Not heroics.</p>
+            </div>
+            <div class="val-card reveal">
+                <div class="val-num">06</div>
+                <h3>Write it down</h3>
+                <p>Anything I did twice turned into a document. It's the only reason the work held up when I was offline.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ========== SEO BACKGROUND ========== -->
-<section class="seo-bg" id="seo">
+<!-- ========== HIGHLIGHTS / AEO GEO RESULTS ========== -->
+<section class="highlights" id="highlights">
     <div class="container">
-        <div class="seo-bg-inner">
-            <div class="reveal">
-                <div class="section-label">SEO Background</div>
-                <h2 class="section-title dark">My SEO background is what<br>taught me to think in systems.</h2>
-                <p class="seo-bg-lead">Five years inside the trenches of organic growth. Local SEO for home service brands, technical fixes on sprawling sites, link building, content ops, and now AEO/GEO for the AI search era. Every campaign was a system underneath: keyword research feeds briefs, briefs feed writers, writers feed editors, editors feed publishing, publishing feeds reporting. Break any link, the whole thing stalls. That's where I learned to build process before output.</p>
-                <p class="seo-bg-lead">If you came here looking for an SEO who can also run your team, that's the order I'd want to be hired in too.</p>
+        <div class="hl-header reveal">
+            <div class="hl-eyebrow"><span></span> AEO/GEO Results</div>
+            <h2 class="hl-title">Real rankings,<br>real fast.</h2>
+            <p class="hl-lead">April to July 2026. 250 blogs published against target keywords, 119 ranking inside two weeks, 104 on page one within a week. Half the winners landed the day they went live. These are pulled from campaign tracking, not rounded up.</p>
+        </div>
+
+        <div class="hl-metrics reveal">
+            <div class="hl-metric"><div class="hl-num" data-count="250" data-suffix="">0</div><div class="hl-label">Blogs Posted</div></div>
+            <div class="hl-metric"><div class="hl-num" data-count="119" data-suffix="">0</div><div class="hl-label">Ranked in 2 Weeks</div></div>
+            <div class="hl-metric"><div class="hl-num" data-count="61" data-suffix="%">0%</div><div class="hl-label">Win Rate</div></div>
+            <div class="hl-metric"><div class="hl-num" data-count="1" data-suffix=" day">0 day</div><div class="hl-label">Median Time to Rank</div></div>
+        </div>
+
+        <div class="hl-wins reveal">
+            <div class="hl-eyebrow-sm">Top Winners</div>
+            <div class="hl-chips">
+                <div class="hl-chip"><strong>"mac mini switch"</strong><span>Client 1 · #1 · 0 days</span></div>
+                <div class="hl-chip"><strong>"screen AI-fluent VA"</strong><span>Client 2 · #1 · 0 days</span></div>
+                <div class="hl-chip"><strong>"best AI agent hosting under $5"</strong><span>Client 1 · #1 · 1 day</span></div>
+                <div class="hl-chip"><strong>"best POS for small business"</strong><span>Client 3 · #2 · 1 day</span></div>
+                <div class="hl-chip"><strong>"best energy broker [city]"</strong><span>Client 4 · #1 · 1 day</span></div>
+                <div class="hl-chip"><strong>"worth it vs competitor"</strong><span>Client 5 · #1 · 1 day</span></div>
             </div>
-            <div class="reveal reveal-delay-2">
-                <div class="seo-stat-grid">
-                    <div class="seo-stat">
-                        <div class="seo-stat-num">30<span>+</span></div>
-                        <div class="seo-stat-lbl">Client accounts managed across roofing, home services, storage, real estate, and local</div>
-                    </div>
-                    <div class="seo-stat">
-                        <div class="seo-stat-num">762<span>%</span></div>
-                        <div class="seo-stat-lbl">Best GBP interactions YoY growth on a single client</div>
-                    </div>
-                    <div class="seo-stat">
-                        <div class="seo-stat-num">5<span>+</span></div>
-                        <div class="seo-stat-lbl">Years running on-page, technical, local, link building, and AEO/GEO campaigns</div>
-                    </div>
-                </div>
-                <div class="seo-specialties">
-                    <div class="tools-title">Specialties</div>
-                    <div class="tools-grid">
-                        <span class="tool-pill">Local SEO</span>
-                        <span class="tool-pill">Technical SEO</span>
-                        <span class="tool-pill">On-Page SEO</span>
-                        <span class="tool-pill">GBP Optimization</span>
-                        <span class="tool-pill">Link Building</span>
-                        <span class="tool-pill">Digital PR</span>
-                        <span class="tool-pill">AEO / GEO</span>
-                        <span class="tool-pill">Schema Markup</span>
-                        <span class="tool-pill">Content Strategy</span>
-                        <span class="tool-pill">Site Audits</span>
-                        <span class="tool-pill">Site Migrations</span>
-                        <span class="tool-pill">Citation Building</span>
-                    </div>
-                </div>
-            </div>
+        </div>
+
+        <div class="hl-footer reveal">
+            <a href="work.html" class="hl-cta">See full case studies →</a>
+            <p class="hl-fine">Days to win = first Campaign Win Rate check that flagged a blog win minus first publish date.</p>
         </div>
     </div>
 </section>
 
-<!-- ========== CONTENT STRATEGY / BLOG SEO ========== -->
-<section class="geo" id="content">
-    <div class="container geo-inner">
-        <div class="geo-header reveal">
-            <div class="geo-tag">Content Strategy</div>
-            <h2 class="section-title light">Blogs that actually<br>rank on Google.</h2>
-            <p class="geo-lead">Most blog content is published and forgotten. Mine is built to rank, planned around real search intent, written for humans, structured for Google, and tracked until it shows up where it's supposed to. No fluff, no filler, no posts that exist just to fill a calendar.</p>
-            <div class="geo-engines">
-                <div class="geo-engine">Google Search</div>
-                <div class="geo-engine">Keyword Research</div>
-                <div class="geo-engine">On-Page SEO</div>
-                <div class="geo-engine">Internal Linking</div>
-                <div class="geo-engine">Schema</div>
-            </div>
-        </div>
+<style>
+.highlights {
+    background: #0a0614 !important;
+    color: #f5f0ff !important;
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.highlights .hl-header { text-align: center; max-width: 780px; margin: 0 auto 3.5rem; }
+.highlights .hl-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.78rem;
+    color: #ff6b1a; font-weight: 600;
+}
+.highlights .hl-eyebrow span {
+    display: inline-block; width: 32px; height: 1px; background: #ff6b1a;
+}
+.highlights .hl-title {
+    font-family: var(--font-display, 'Instrument Serif', serif);
+    color: #f5f0ff !important;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    margin: 1.25rem 0 1.5rem;
+    font-weight: 400;
+}
+.highlights .hl-lead {
+    color: #d4c8e8 !important;
+    font-size: 1.1rem; line-height: 1.7;
+}
+.highlights .hl-metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; margin-bottom: 4rem;
+}
+.highlights .hl-metric {
+    text-align: center; padding: 2.5rem 1rem;
+    border: 1px solid rgba(245,240,255,0.1);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.02);
+}
+.highlights .hl-num {
+    font-family: var(--font-display, 'Instrument Serif', serif);
+    font-size: 3.5rem; font-weight: 400; color: #ff6b1a; line-height: 1;
+}
+.highlights .hl-label {
+    color: #d4c8e8; margin-top: 0.75rem; font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+.highlights .hl-wins { margin-bottom: 2.5rem; }
+.highlights .hl-eyebrow-sm {
+    text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.78rem;
+    color: #ff6b1a; margin-bottom: 1.25rem; text-align: center; font-weight: 600;
+}
+.highlights .hl-chips {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+}
+.highlights .hl-chip {
+    padding: 0.85rem 1.25rem;
+    border: 1px solid rgba(255,107,26,0.35);
+    border-radius: 999px;
+    background: rgba(255,107,26,0.08);
+    font-size: 0.92rem;
+}
+.highlights .hl-chip strong { color: #ffffff; font-weight: 600; }
+.highlights .hl-chip span { color: #ede4fa; margin-left: 0.5rem; font-weight: 400; }
+.highlights .hl-footer { text-align: center; margin-top: 2.5rem; }
+.highlights .hl-cta {
+    display: inline-block; color: #ff8c42 !important; font-weight: 700;
+    text-decoration: none; border-bottom: 1.5px solid #ff8c42; padding-bottom: 3px;
+    font-size: 1rem;
+}
+.highlights .hl-cta:hover { color: #ffa96b !important; border-bottom-color: #ffa96b; }
+.highlights .hl-fine {
+    color: #bfb4d5; font-size: 0.88rem; margin: 2rem auto 0;
+    max-width: 640px; opacity: 1;
+}
+@media (max-width: 768px) {
+    .highlights .hl-metrics { grid-template-columns: repeat(2, 1fr); }
+}
 
-        <div class="geo-grid">
-            <div class="geo-strategy reveal">
-                <h3>My process for ranking blogs.</h3>
-                <div class="geo-step">
-                    <div class="geo-step-num">01</div>
-                    <div>
-                        <h4>Keyword research with intent in mind</h4>
-                        <p>Pick keywords by volume, difficulty, and what the searcher actually wants. Informational, commercial, transactional, each one needs a different shape of post. Skip the vanity terms that bring traffic but no buyers.</p>
-                    </div>
-                </div>
-                <div class="geo-step">
-                    <div class="geo-step-num">02</div>
-                    <div>
-                        <h4>SERP analysis before the brief</h4>
-                        <p>Look at the top 10 for the target keyword. What format ranks, listicle, guide, comparison? What's the average word count? What questions does Google show in People Also Ask? The brief is built off what's already winning, then sharpened to beat it.</p>
-                    </div>
-                </div>
-                <div class="geo-step">
-                    <div class="geo-step-num">03</div>
-                    <div>
-                        <h4>On-page that earns the click</h4>
-                        <p>Title tags and meta descriptions written to compete in the SERP, not generated by a plugin. Clean H1/H2 hierarchy, target keyword and variations placed where they belong, internal links to and from supporting posts, image alt text, schema markup where it fits.</p>
-                    </div>
-                </div>
-                <div class="geo-step">
-                    <div class="geo-step-num">04</div>
-                    <div>
-                        <h4>Content built for the reader and the crawler</h4>
-                        <p>Clear intro, scannable subheads, short paragraphs, real examples, original insight. Long enough to fully answer the query, short enough to respect the reader's time. Google rewards the post people actually finish.</p>
-                    </div>
-                </div>
-                <div class="geo-step">
-                    <div class="geo-step-num">05</div>
-                    <div>
-                        <h4>Track, refresh, repeat</h4>
-                        <p>Watch rankings and clicks in Search Console. Posts on page two get a refresh: better intro, stronger structure, new internal links, updated info. The biggest wins usually come from improving what's already close, not chasing new posts.</p>
-                    </div>
-                </div>
-            </div>
+/* ============================================================
+   CHAPTERS / VALUES / OFF THE CLOCK
+   ============================================================ */
+.chapters, .values {
+    position: relative;
+    padding: 7.5rem 0;
+    color: #f5f0ff;
+}
+.chapters { background: #0f0a1c; }
+.values { background: #0a0614; }
 
-            <aside class="geo-results reveal reveal-delay-1">
-                <div class="geo-results-label">Results</div>
-                <h3>Keywords ranked. Traffic earned.</h3>
-                <div class="geo-stat">
-                    <div class="geo-stat-label">Keywords on page 1</div>
-                    <div class="geo-stat-value">—</div>
-                </div>
-                <div class="geo-stat">
-                    <div class="geo-stat-label">Top 3 rankings</div>
-                    <div class="geo-stat-value">—</div>
-                </div>
-                <div class="geo-stat">
-                    <div class="geo-stat-label">Organic traffic growth</div>
-                    <div class="geo-stat-value">—</div>
-                </div>
-                <div class="geo-stat">
-                    <div class="geo-stat-label">Blogs ranked</div>
-                    <div class="geo-stat-value">—</div>
-                </div>
-                <div class="geo-placeholder">Specific keywords, ranking screenshots, and Search Console graphs to be plugged in here.</div>
-            </aside>
-        </div>
+.chapters .hl-eyebrow, .values .hl-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.78rem;
+    color: #ff6b1a; font-weight: 600;
+}
+.chapters .hl-eyebrow span, .values .hl-eyebrow span {
+    display: inline-block; width: 32px; height: 1px; background: #ff6b1a;
+}
+.ch-header { max-width: 760px; margin-bottom: 4rem; }
+.values .ch-header { margin-bottom: 3rem; }
+.ch-title {
+    font-family: var(--font-display, 'Instrument Serif', serif);
+    font-weight: 400;
+    font-size: clamp(2.3rem, 5.2vw, 3.7rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 1.1rem 0 1.2rem;
+    color: #f5f0ff;
+}
+.ch-lead { color: #c9bce0; font-size: 1.08rem; line-height: 1.7; max-width: 52ch; }
 
-        <div class="geo-edge reveal">
-            <div class="geo-edge-icon">📈</div>
-            <p>Anyone can publish a blog. <span>Getting it to rank is a different skill,</span> and it's the difference between content that earns traffic for years and content that disappears the day it goes live.</p>
-        </div>
-    </div>
-</section>
+/* chapter rows */
+.ch-list { border-top: 1px solid rgba(245,240,255,0.09); }
+.ch-item {
+    display: grid;
+    grid-template-columns: 76px 1fr 190px;
+    gap: 2rem;
+    align-items: start;
+    padding: 2.6rem 1rem 2.6rem 0.25rem;
+    border-bottom: 1px solid rgba(245,240,255,0.09);
+    position: relative;
+    transition: background 0.4s ease, padding-left 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.ch-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: -1px; bottom: -1px;
+    width: 2px;
+    background: var(--coral, #ff6b1a);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+.ch-item:hover { background: rgba(255,107,26,0.035); padding-left: 1.25rem; }
+.ch-item:hover::before { transform: scaleY(1); }
+.ch-index {
+    font-family: var(--font-display, 'Instrument Serif', serif);
+    font-size: 2.4rem;
+    line-height: 1;
+    color: rgba(255,107,26,0.55);
+    transition: color 0.35s ease;
+}
+.ch-item:hover .ch-index { color: #ff8c42; }
+.ch-when {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.72rem;
+    color: #9b8bb8;
+    margin-bottom: 0.55rem;
+}
+.ch-name {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.7rem;
+    letter-spacing: -0.01em;
+}
+.ch-body p { color: #c2b6d8; line-height: 1.72; max-width: 58ch; margin: 0; }
+.ch-stat { text-align: right; }
+.ch-stat strong {
+    display: block;
+    font-family: var(--font-display, 'Instrument Serif', serif);
+    font-weight: 400;
+    font-size: 2.1rem;
+    color: #ff6b1a;
+    line-height: 1.1;
+}
+.ch-stat span {
+    display: block;
+    font-size: 0.82rem;
+    color: #9b8bb8;
+    margin-top: 0.3rem;
+    letter-spacing: 0.02em;
+}
 
-<!-- ========== EXPERIENCE ========== -->
-<section class="experience" id="experience">
-    <div class="container">
-        <div style="text-align: center;" class="reveal">
-            <div class="section-label" style="justify-content: center;">Experience</div>
-            <h2 class="section-title light">Where I've<br>made an impact.</h2>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item reveal">
-                <div class="timeline-content">
-                    <div class="timeline-date">2026 — Recent</div>
-                    <div class="timeline-role">Operations Lead / Strategist</div>
-                    <div class="timeline-company">AI Search Optimization Startup</div>
-                    <div class="timeline-desc">Led operations for an AI search platform that helps brands get cited by ChatGPT, Perplexity, and Google AI Overviews. Managed blog production, Reddit ops, and a VA team. Built an internal Operations Dashboard in React and Supabase, deployed on Vercel, covering Reddit ops, blog content, and SEO tracking. It replaced a sprawl of spreadsheets and cut review time significantly. Owned AEO/GEO strategy and schema implementation across client work.</div>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-empty"></div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-empty"></div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">2024 — 2026</div>
-                    <div class="timeline-role">Operations Lead / Senior SEO Manager</div>
-                    <div class="timeline-company">Cascade Web Solutions</div>
-                    <div class="timeline-desc">Joined as the agency's first VA hire and grew into the senior manager keeping 30+ client accounts on rails. Built the SOPs, ran hiring and onboarding for the VA team, owned client communication, and standardized the full-cycle SEO workflow across roofing, home services, storage, real estate, and local. Turned a one-person operation into a system other people could run.</div>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-content">
-                    <div class="timeline-date">2021 — 2023</div>
-                    <div class="timeline-role">Project Manager & Social Media Manager</div>
-                    <div class="timeline-company">GSV Studio</div>
-                    <div class="timeline-desc">Managed 6 simultaneous digital projects for a Canadian agency and led cross-functional remote teams of VAs across Pakistan, Latin America, and the Philippines. Built social media strategies and content calendars from scratch. First time leading a team — and where I learned that the right process is what makes remote work actually work.</div>
-                </div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-empty"></div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-empty"></div>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">2019 — 2023</div>
-                    <div class="timeline-role">BS in Tourism Management</div>
-                    <div class="timeline-company">University of St. La Salle — Bacolod</div>
-                    <div class="timeline-desc">Graduated with a degree in Tourism Management. Previously studied Accounting, Business and Management at La Consolacion College (2016–2018).</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+/* values */
+.val-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(245,240,255,0.09);
+    border: 1px solid rgba(245,240,255,0.09);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.val-card {
+    background: #0a0614;
+    padding: 2.4rem 2rem 2.6rem;
+    transition: background 0.35s ease;
+}
+.val-card:hover { background: #130b24; }
+.val-num {
+    font-family: 'Geist Mono', ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: #ff6b1a;
+    margin-bottom: 1.4rem;
+}
+.val-card h3 {
+    font-size: 1.22rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.7rem;
+    letter-spacing: -0.01em;
+}
+.val-card p { color: #b8abd0; line-height: 1.7; margin: 0; font-size: 0.98rem; }
 
-<!-- ========== WORK ========== -->
-<section class="work" id="work">
-    <div class="container">
-        <div class="reveal">
-            <div class="section-label">My Work</div>
-            <h2 class="section-title dark">Projects & results<br>that speak for themselves.</h2>
-        </div>
-        <div class="work-tabs reveal">
-            <button class="work-tab active" data-tab="tools">Internal Tools</button>
-            <button class="work-tab" data-tab="deliverables">Deliverables</button>
-            <button class="work-tab" data-tab="gbp">GBP Posts</button>
-            <button class="work-tab" data-tab="graphics">Graphic Design</button>
-            <button class="work-tab" data-tab="results">SEO Results</button>
-        </div>
+@media (max-width: 900px) {
+    .val-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+    .chapters, .values { padding: 5rem 0; }
+    .ch-item {
+        grid-template-columns: 48px 1fr;
+        gap: 1.1rem;
+        padding: 2rem 0;
+    }
+    .ch-index { font-size: 1.7rem; }
+    .ch-stat { grid-column: 2; text-align: left; margin-top: 1.1rem; }
+    .ch-stat strong { font-size: 1.7rem; }
+    .val-grid { grid-template-columns: 1fr; }
+    .val-card { padding: 1.9rem 1.5rem; }
+}
 
-        <!-- Internal Tools Tab -->
-        <div class="work-category active" id="tab-tools">
-            <div class="work-link-cards reveal" style="grid-column: 1 / -1;">
-                <div class="work-link-card" style="text-align:left; align-items:flex-start;">
-                    <div class="work-link-icon teal">⚙️</div>
-                    <div class="work-link-title">Operations Dashboard</div>
-                    <div class="work-link-desc" style="text-align:left;">Built for an AI search startup in React + Supabase, deployed on Vercel. One internal tool covering Reddit ops, blog content production, and SEO tracking, replacing a tangle of spreadsheets the team was using for accounts, posts, briefs, drafts, rankings, and client assignments. Centralized scheduling, status, and reporting in one place; review time dropped and missed work went near-zero. Prompted and shipped with Cursor + Claude.</div>
-                    <div class="work-link-btn">React · Supabase · Vercel</div>
-                </div>
-                <div class="work-link-card" style="text-align:left; align-items:flex-start;">
-                    <div class="work-link-icon orange">📐</div>
-                    <div class="work-link-title">SOP & Workflow Library</div>
-                    <div class="work-link-desc" style="text-align:left;">A living set of SOPs covering onboarding, blog production, Reddit ops, QA, client comms, and reporting. Originally built at Cascade for 30+ accounts and refined across engagements since. Written so a new hire can take a task from zero to done without pinging the founder.</div>
-                    <div class="work-link-btn">Notion · Linear · Slack</div>
-                </div>
-                <div class="work-link-card" style="text-align:left; align-items:flex-start;">
-                    <div class="work-link-icon blue">🤖</div>
-                    <div class="work-link-title">AI-Assisted Internal Tools</div>
-                    <div class="work-link-desc" style="text-align:left;">Prompt-engineered workflows and small internal tools using Claude, ChatGPT, Gemini, and Cursor. Anything from QA checklists and content briefs to one-off scripts that save the team hours a week. Vibe-coded, but built to last.</div>
-                    <div class="work-link-btn">Claude · ChatGPT · Cursor</div>
-                </div>
-            </div>
-        </div>
+/* ============================================================
+   POLISH & INTERACTIONS
+   ============================================================ */
 
-        <!-- Deliverables Tab -->
-        <div class="work-category" id="tab-deliverables">
-            <div class="work-link-cards reveal" style="grid-column: 1 / -1;">
-                <a href="https://drive.google.com/drive/u/1/folders/1Y2qAPkH9u-9Rua8IkWlhB0mRT0fLUBRK" target="_blank" class="work-link-card">
-                    <div class="work-link-icon teal">📊</div>
-                    <div class="work-link-title">Site Audits</div>
-                    <div class="work-link-desc">Comprehensive technical SEO audits covering site health, on-page issues, backlink profiles, and actionable recommendations.</div>
-                    <div class="work-link-btn">View Audits <span>→</span></div>
-                </a>
-                <a href="https://www.figma.com/design/j1xfWpbLq0wsA9aUpWLF8N/PORTFOLIO---WEB-DESIGN?node-id=0-1&p=f" target="_blank" class="work-link-card">
-                    <div class="work-link-icon orange">🎨</div>
-                    <div class="work-link-title">Website Designs</div>
-                    <div class="work-link-desc">Custom Figma web designs for client sites — from wireframes to high-fidelity mockups ready for development.</div>
-                    <div class="work-link-btn">View Designs <span>→</span></div>
-                </a>
-                <a href="https://drive.google.com/drive/u/1/folders/1YcbBIrb_-tLCB2UiKjs-HiHi0pkv7CRW" target="_blank" class="work-link-card">
-                    <div class="work-link-icon blue">📋</div>
-                    <div class="work-link-title">SEO Proposals</div>
-                    <div class="work-link-desc">Strategic SEO proposals outlining campaign roadmaps, keyword targets, competitive analysis, and projected outcomes.</div>
-                    <div class="work-link-btn">View Proposals <span>→</span></div>
-                </a>
-            </div>
-        </div>
+/* Hero parallax + softer blob motion */
+.hero::before,
+.hero::after {
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero::before {
+    transform: translateY(calc(var(--parallax-y-slow, 0px) * -0.5));
+}
+.hero::after {
+    transform: translateY(calc(var(--parallax-y, 0px) * -0.4));
+}
+.hero-image-container {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+}
+.hero-float-1, .hero-float-2 {
+    will-change: transform;
+}
 
-        <!-- GBP Posts Tab -->
-        <div class="work-category" id="tab-gbp">
-            <div class="work-card reveal">
-                <img src="images/gbp-posts/ags-photoart.png" alt="AGS Photo Art GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">AGS Photo Art</div>
-                    <div class="work-card-desc">Wedding Photography — Carmel-By-The-Sea, CA</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-1">
-                <img src="images/gbp-posts/bray-electrical.png" alt="Bray Electrical GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Bray Electrical</div>
-                    <div class="work-card-desc">Electrical Services — Dunwoody, GA</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-2">
-                <img src="images/gbp-posts/bugshockers.png" alt="Bugshockers GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Bugshockers</div>
-                    <div class="work-card-desc">Pest Control — Wichita, KS</div>
-                </div>
-            </div>
-            <div class="work-card reveal">
-                <img src="images/gbp-posts/expert-epoxy.png" alt="Expert Epoxy GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Expert Epoxy Solutions</div>
-                    <div class="work-card-desc">Epoxy Flooring — Wilmington, NC</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-1">
-                <img src="images/gbp-posts/green-dot.png" alt="Green Dot Painting GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Green Dot Painting</div>
-                    <div class="work-card-desc">Painting Services — Huntsville, AL</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-2">
-                <img src="images/gbp-posts/integrity-roofers.png" alt="Integrity Roofers GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Integrity Roofers</div>
-                    <div class="work-card-desc">Roofing — Toronto, ON, Canada</div>
-                </div>
-            </div>
-            <div class="work-card reveal">
-                <img src="images/gbp-posts/pools-etc.png" alt="Pools Etc GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Pools Etc</div>
-                    <div class="work-card-desc">Pool Services — Menlo Park, CA</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-1">
-                <img src="images/gbp-posts/storage-daytona.png" alt="Storage Units Daytona Beach GBP Post" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Storage Units Daytona Beach</div>
-                    <div class="work-card-desc">Storage Facility — Daytona Beach, FL</div>
-                </div>
-            </div>
-        </div>
+/* Nav link underline sweep */
+.nav-links a {
+    position: relative;
+    padding: 4px 0;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--teal);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
-        <!-- Graphic Design Tab -->
-        <div class="work-category" id="tab-graphics">
-            <div class="work-card reveal">
-                <img src="images/graphic-designs/design1.avif" alt="Social Media Design" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Social Media Post</div>
-                    <div class="work-card-desc">Custom graphic design for client social media</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-1">
-                <img src="images/graphic-designs/design2.avif" alt="Social Media Design" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Social Media Post</div>
-                    <div class="work-card-desc">Custom graphic design for client social media</div>
-                </div>
-            </div>
-            <div class="work-card reveal reveal-delay-2">
-                <img src="images/graphic-designs/design3.avif" alt="Social Media Design" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Social Media Post</div>
-                    <div class="work-card-desc">Custom graphic design for client social media</div>
-                </div>
-            </div>
-            <div class="work-card reveal">
-                <img src="images/graphic-designs/design4.avif" alt="Social Media Design" class="work-card-image zoomable">
-                <div class="work-card-body">
-                    <div class="work-card-title">Social Media Post</div>
-                    <div class="work-card-desc">Custom graphic design for client social media</div>
-                </div>
-            </div>
-        </div>
+/* Buttons: nicer lift */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                background 0.3s ease;
+}
+.btn-primary {
+    box-shadow: 0 4px 14px rgba(255, 107, 26, 0.25);
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(255, 107, 26, 0.4);
+}
+.btn-outline:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 107, 26, 0.18);
+}
 
-        <!-- SEO Results Tab -->
-        <div class="work-category" id="tab-results">
-            <div class="results-grid reveal" style="grid-column: 1 / -1;">
-                <div class="result-card">
-                    <img src="images/seo-results/geogrid-before-after.png" alt="GeoGrid Before and After" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Local Rankings Transformation</span>
-                        <span class="result-highlight">17.94 → 3.02 Avg</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/geogrid-green.png" alt="GeoGrid Results" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Map Pack Dominance</span>
-                        <span class="result-highlight">2.74 Avg Rank</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/gbp-interactions2.png" alt="GBP Interactions Growth" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">GBP Interactions Growth</span>
-                        <span class="result-highlight">+762.7% YoY</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/gbp-interactions1.png" alt="GBP Performance" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Business Profile Performance</span>
-                        <span class="result-highlight">+48.9% YoY</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/keyword-rankings-roofing.png" alt="Roofing Keyword Rankings" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Roofing Keywords — Charlotte, NC</span>
-                        <span class="result-highlight">Up to +49 Positions</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/keyword-rankings-pest.png" alt="Pest Control Keyword Rankings" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Pest Control Keywords — Wichita, KS</span>
-                        <span class="result-highlight">Up to +49 Positions</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/ahrefs-overview1.png" alt="Ahrefs Overview" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Organic Growth Overview</span>
-                        <span class="result-highlight">+96 Organic Traffic</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/ahrefs-overview2.png" alt="Ahrefs Overview" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">Backlink Profile Growth</span>
-                        <span class="result-highlight">+102 Backlinks</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/gbp-interactions3.png" alt="GBP Interactions" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">GBP Interactions Growth</span>
-                        <span class="result-highlight">+61.5% YoY</span>
-                    </div>
-                </div>
-                <div class="result-card">
-                    <img src="images/seo-results/gbp-interactions4.png" alt="GBP Interactions" class="zoomable">
-                    <div class="result-card-body">
-                        <span class="result-card-label">GBP Interactions Growth</span>
-                        <span class="result-highlight">+55.9% YoY</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+/* Skill tag micro-interaction */
+.skill-tag {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                border-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+.skill-tag:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+.tool-pill {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+.tool-pill:hover {
+    transform: translateY(-2px);
+}
 
-<!-- ========== CASE STUDIES ========== -->
-<section class="cases" id="case-studies">
-    <div class="container">
-        <div class="cases-header reveal">
-            <div class="section-label">Case Studies</div>
-            <h2 class="section-title dark">A closer look at how<br>messy turns into measurable.</h2>
-        </div>
-        <div class="cases-grid">
+/* Highlights metric cards - lift + accent border on hover */
+.highlights .hl-metric {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.3s ease,
+                background 0.3s ease;
+    cursor: default;
+}
+.highlights .hl-metric:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 107, 26, 0.4);
+    background: rgba(255, 107, 26, 0.04);
+}
+.highlights .hl-num {
+    display: inline-block;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.highlights .hl-metric:hover .hl-num {
+    transform: scale(1.06);
+}
 
-            <div class="case-card reveal">
-                <div class="case-side">
-                    <div>
-                        <span class="case-tag">AI Search Startup · Internal Tooling</span>
-                        <h3>Operations Dashboard</h3>
-                        <p style="color: var(--gray-400); font-size: 0.95rem;">A scrappy ops team running Reddit, blog content, and SEO workflows across copy-pasted spreadsheets.</p>
-                    </div>
-                    <div class="case-metric">
-                        <div class="case-metric-value">1 wk</div>
-                        <div class="case-metric-label">From Google Sheets to fully adopted internal tool</div>
-                    </div>
-                </div>
-                <div class="case-body">
-                    <div class="case-block">
-                        <div class="case-block-label">Problem</div>
-                        <p>The team was tracking Reddit accounts and posts, blog briefs and drafts, and SEO rankings across a tangle of disconnected Google Sheets. VAs couldn't see status at a glance, founders couldn't audit quality, and nothing scaled past a handful of clients.</p>
-                    </div>
-                    <div class="case-block">
-                        <div class="case-block-label solution">Solution</div>
-                        <p>Designed and shipped a custom Operations Dashboard with three connected modules: Reddit account states and posting queues, blog content production from brief to publish, and SEO tracking for rankings and deliverables. Built it lightweight so the team could actually use it on day one, not in a quarter.</p>
-                        <div class="case-stack">
-                            <span>React</span><span>Supabase</span><span>Vercel</span><span>Cursor</span><span>Claude</span>
-                        </div>
-                    </div>
-                    <div class="case-block">
-                        <div class="case-block-label result">Result</div>
-                        <p>The team moved off spreadsheets inside the first week. Ops became auditable, VA throughput went up, and the dashboard replaced the folder of tabs nobody trusted as the source of truth.</p>
-                    </div>
-                </div>
-            </div>
+/* Win chip pop on hover */
+.highlights .hl-chip {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+.highlights .hl-chip:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 107, 26, 0.15);
+    border-color: rgba(255, 107, 26, 0.6);
+}
 
-            <div class="case-card reveal reveal-delay-1">
-                <div class="case-side">
-                    <div>
-                        <span class="case-tag">Cascade · SEO Operations</span>
-                        <h3>Standardizing 30+ SEO Clients</h3>
-                        <p style="color: var(--gray-400); font-size: 0.95rem;">A growing agency where every account ran on a different process and quality moved with whoever owned it.</p>
-                    </div>
-                    <div class="case-metric">
-                        <div class="case-metric-value">762%</div>
-                        <div class="case-metric-label">Average GBP growth across managed accounts</div>
-                    </div>
-                </div>
-                <div class="case-body">
-                    <div class="case-block">
-                        <div class="case-block-label">Problem</div>
-                        <p>30+ active SEO clients, no standardized delivery, every VA reinventing the wheel for audits, GBP optimization, and reporting. Quality was a coin flip and onboarding new hires took forever.</p>
-                    </div>
-                    <div class="case-block">
-                        <div class="case-block-label solution">Solution</div>
-                        <p>Built end-to-end SOPs for technical audits, on-page, local SEO, schema, GBP, and reporting. Trained the VA team, set up review checkpoints, and turned tribal knowledge into a system anyone could follow.</p>
-                        <div class="case-stack">
-                            <span>SOPs</span><span>GBP</span><span>Schema</span><span>Loom</span><span>VA Training</span>
-                        </div>
-                    </div>
-                    <div class="case-block">
-                        <div class="case-block-label result">Result</div>
-                        <p>Average 762% GBP growth across managed accounts, consistent delivery quality, and onboarding time for new VAs dropped from weeks to days. The agency could finally take on accounts without breaking.</p>
-                    </div>
-                </div>
-            </div>
+/* Slow-drifting background aura for highlights section */
+@keyframes aura-drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(4%, -2%) scale(1.05); }
+    66% { transform: translate(-3%, 3%) scale(0.98); }
+}
+.highlights::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 60%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 107, 26, 0.08) 0%, transparent 60%);
+    animation: aura-drift 22s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+.highlights::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -20%;
+    width: 55%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(155, 139, 184, 0.08) 0%, transparent 60%);
+    animation: aura-drift 28s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 0;
+}
+.highlights .container { position: relative; z-index: 1; }
 
-            <div class="case-card reveal reveal-delay-2">
-                <div class="case-side">
-                    <div>
-                        <span class="case-tag">Cross-Client · Remote Teams</span>
-                        <h3>Building the VA Engine</h3>
-                        <p style="color: var(--gray-400); font-size: 0.95rem;">Founders hiring overseas talent fast and losing days to bad onboarding, missed handoffs, and unclear ownership.</p>
-                    </div>
-                    <div class="case-metric">
-                        <div class="case-metric-value">20+</div>
-                        <div class="case-metric-label">VAs sourced, hired, and onboarded across roles</div>
-                    </div>
-                </div>
-                <div class="case-body">
-                    <div class="case-block">
-                        <div class="case-block-label">Problem</div>
-                        <p>Teams growing past five people with no recruiting funnel, no onboarding doc, and no clear sense of who owned what. Every new hire meant a founder context-dump and a slow climb to usefulness.</p>
-                    </div>
-                    <div class="case-block">
-                        <div class="case-block-label solution">Solution</div>
-                        <p>Built a full hiring pipeline: sourcing channels, screening tests, interview loops, and a structured onboarding flow with role-specific SOPs and a two-week ramp plan. Tracked everything inside Linear and Slack so nothing depended on memory.</p>
-                        <div class="case-stack">
-                            <span>Recruiting</span><span>Onboarding</span><span>Linear</span><span>Slack</span><span>SOPs</span>
-                        </div>
-                    </div>
-                    <div class="case-block">
-                        <div class="case-block-label result">Result</div>
-                        <p>New VAs hit useful work inside two weeks instead of two months. Founders stopped being the bottleneck, retention went up, and the hiring engine kept running whether I was active on it or not.</p>
-                    </div>
-                </div>
-            </div>
+/* Testimonial cards - lift and tilt-in accent */
+.testimonial-card {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.3s ease,
+                box-shadow 0.4s ease,
+                background 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-8px);
+}
+.testimonial-avatar {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.testimonial-card:hover .testimonial-avatar {
+    transform: scale(1.1) rotate(-4deg);
+}
 
-        </div>
-    </div>
-</section>
+/* Form inputs - warmer focus */
+.form-input, .form-textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+.form-input:focus, .form-textarea:focus {
+    transform: translateY(-1px);
+}
+.form-submit {
+    box-shadow: 0 4px 14px rgba(255, 107, 26, 0.25);
+}
+.form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(255, 107, 26, 0.4);
+}
+
+/* Section title subtle character */
+.section-title {
+    letter-spacing: -0.015em;
+}
+
+/* ============================================================
+   TYPE SYSTEM — three fonts, fixed roles
+   1. Instrument Serif  -> H1, H2, H3, big numbers
+   2. Geist Mono        -> small eyebrow labels only
+   3. Geist             -> body, taglines, buttons, everything else
+   ============================================================ */
+h1, h2, h3, h4,
+.hero-name,
+.section-title,
+.ch-title, .ch-name,
+.hl-title,
+.val-card h3,
+.work-hub-title,
+.hero-stat-number,
+.hl-num,
+.ch-stat strong {
+    font-family: var(--font-display) !important;
+    font-style: normal !important;
+}
+.hero-name .accent { font-style: italic !important; }
+
+.section-label,
+.hl-eyebrow, .hl-eyebrow-sm,
+.ch-when,
+.val-num,
+.hero-greeting {
+    font-family: var(--font-mono) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+}
+
+body,
+p, li, span, a, small, strong, em, label,
+button, input, textarea, select,
+.hero-role,
+.hero-desc,
+.hero-availability,
+.hero-stat-label,
+.btn,
+.skill-tag, .tool-pill, .tools-title,
+.ch-lead, .ch-body p, .ch-stat span,
+.val-card p,
+.hl-lead, .hl-label, .hl-chip, .hl-chip strong, .hl-chip span, .hl-cta, .hl-fine,
+.testimonial-text, .testimonial-name, .testimonial-author div,
+.contact-info-text, .contact-detail-label, .contact-detail-value,
+.form-label, .form-input, .form-textarea, .form-submit,
+.nav-links a, .nav-logo,
+.footer-text {
+    font-family: var(--font-body) !important;
+}
+/* keep the display font winning inside headings */
+.hero-name span, .section-title span, .ch-title span, .hl-title span,
+.hero-stat-number span, .hl-num span, .ch-stat strong span {
+    font-family: var(--font-display) !important;
+}
+.hero-role {
+    text-transform: none !important;
+    letter-spacing: 0.01em !important;
+    font-size: 1.02rem !important;
+    font-weight: 500 !important;
+}
+.hero-stat-label, .tools-title {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.74rem !important;
+    font-weight: 600 !important;
+}
+.tool-pill, .skill-tag { letter-spacing: 0.01em !important; text-transform: none !important; }
+.testimonial-avatar { font-family: var(--font-body) !important; letter-spacing: 0.04em; }
+.footer-text { letter-spacing: 0.02em !important; }
+.ch-name { font-size: 1.5rem !important; }
+.val-card h3 { font-size: 1.32rem !important; }
+
+/* ---- sent confirmation toast ---- */
+.sent-toast {
+    position: fixed;
+    top: 88px;
+    left: 50%;
+    transform: translate(-50%, -16px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    max-width: min(92vw, 460px);
+    padding: 0.95rem 1.1rem 0.95rem 1.15rem;
+    border-radius: 14px;
+    background: rgba(26, 16, 44, 0.94);
+    border: 1px solid rgba(255, 126, 95, 0.35);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    color: #fbf7f2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.sent-toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.sent-toast-dot {
+    flex: 0 0 auto;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, #ff7e5f, #ffb27a);
+    color: #1a102c;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.sent-toast p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #fbf7f2 !important;
+}
+.sent-toast button {
+    flex: 0 0 auto;
+    margin-left: 0.35rem;
+    background: none;
+    border: none;
+    color: rgba(251, 247, 242, 0.5);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 6px;
+}
+.sent-toast button:hover { color: #fbf7f2; background: rgba(255,255,255,0.08); }
+.sent-toast button:focus-visible { outline: 2px solid #ff7e5f; outline-offset: 2px; }
+@media (max-width: 600px) {
+    .sent-toast { top: 76px; padding: 0.85rem 0.9rem; }
+    .sent-toast p { font-size: 0.88rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sent-toast { transition: none; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .highlights::before,
+    .highlights::after,
+    .hero-name .accent,
+    .hero-image-container::before,
+    .hero-float-1,
+    .hero-float-2 {
+        animation: none !important;
+    }
+    * {
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
 
 <!-- ========== TESTIMONIALS ========== -->
 <section class="testimonials" id="testimonials">
     <div class="container">
         <div style="text-align: center;" class="reveal">
             <div class="section-label" style="justify-content: center;">Testimonials</div>
-            <h2 class="section-title light">What my clients<br>say about me.</h2>
+            <h2 class="section-title light">People I've<br>worked with.</h2>
         </div>
         <div class="testimonials-grid">
             <div class="testimonial-card featured reveal">
@@ -3918,136 +4042,29 @@
 </section>
 
 <!-- ========== TEAM SAYS ========== -->
-<section class="team-section" id="team">
-    <div class="container">
-        <div style="text-align: center;" class="reveal">
-            <div class="section-label" style="justify-content: center;">My Team</div>
-            <h2 class="section-title light">What my team<br>says about me.</h2>
-        </div>
-        <div class="team-grid">
-            <div class="team-card reveal">
-                <span class="team-card-label seo">SEO Team</span>
-                <div class="team-quote-display" id="seo-quote">
-                    <p class="team-card-prompt">Click a team member to see what they say →</p>
-                </div>
-                <div class="team-card-members">
-                    <div class="team-member-chip clickable active-chip" data-team="seo" data-name="Ysabella M." data-quote="Karen is the kind of mentor who genuinely wants you to succeed. She took the time to walk me through technical audits and keyword strategy until it clicked. I went from feeling lost to confidently running campaigns on my own — and that's because of her.">
-                        <div class="team-member-avatar teal-bg">YM</div>
-                        <span class="team-member-name">Ysabella M.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="seo" data-name="Gail A." data-quote="What sets Karen apart is her eye for detail. She catches things the rest of us miss — a broken redirect, an inconsistent NAP, a missing schema tag. She's taught me to always double-check my work, and that habit has made me so much better at what I do.">
-                        <div class="team-member-avatar teal-bg">GA</div>
-                        <span class="team-member-name">Gail A.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="seo" data-name="Dolly A." data-quote="Karen thinks three steps ahead. She doesn't just fix problems — she builds systems that prevent them. Her SOPs and processes have made our entire workflow smoother, and she's always open to new ideas from the team.">
-                        <div class="team-member-avatar teal-bg">DA</div>
-                        <span class="team-member-name">Dolly A.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="seo" data-name="Jean S." data-quote="I joined the team with zero SEO experience, and Karen was incredibly patient with me. She broke down complex concepts into simple steps and never made me feel bad for asking questions. She's the reason I'm confident in this field now.">
-                        <div class="team-member-avatar teal-bg">JS</div>
-                        <span class="team-member-name">Jean S.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="seo" data-name="Yvonne P." data-quote="Karen leads by example. She's usually the first one online and the last one checking reports. She holds us to a high standard, but she holds herself to an even higher one. That kind of leadership earns real respect from the team.">
-                        <div class="team-member-avatar teal-bg">YP</div>
-                        <span class="team-member-name">Yvonne P.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="team-card reveal reveal-delay-2">
-                <span class="team-card-label social">Social Media Team</span>
-                <div class="team-quote-display" id="social-quote">
-                    <p class="team-card-prompt">Click a team member to see what they say →</p>
-                </div>
-                <div class="team-card-members">
-                    <div class="team-member-chip clickable active-chip" data-team="social" data-name="Zeeshan A." data-quote="Karen has a natural ability to see the bigger picture while still caring about the small details. She pushed our creative boundaries and helped us produce content that actually moved the needle for clients. Working with her made me a better marketer.">
-                        <div class="team-member-avatar orange-bg">ZA</div>
-                        <span class="team-member-name">Zeeshan A.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="social" data-name="Aisha N." data-quote="Karen's communication is top-tier. She always keeps the team in the loop, gives clear feedback, and makes sure everyone knows exactly what's expected. There's never any guessing with her — and that makes working together really smooth.">
-                        <div class="team-member-avatar orange-bg">AN</div>
-                        <span class="team-member-name">Aisha N.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="social" data-name="James M." data-quote="I've worked with a lot of project leads, and Karen is one of the most organized I've seen. She juggles multiple clients and campaigns without ever dropping the ball. Her content calendars and workflows keep everything running like clockwork.">
-                        <div class="team-member-avatar orange-bg">JM</div>
-                        <span class="team-member-name">James M.</span>
-                    </div>
-                    <div class="team-member-chip clickable" data-team="social" data-name="Jaque S." data-quote="What I appreciate most about Karen is that she genuinely cares about her team. She checks in on you, celebrates your wins, and backs you up when things get tough. She creates a work environment where you actually want to do your best.">
-                        <div class="team-member-avatar orange-bg">JS</div>
-                        <span class="team-member-name">Jaque S.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ========== WHO I WORK WITH ========== -->
-<section class="audience" id="who">
-    <div class="container audience-inner">
-        <div class="audience-header reveal">
-            <div class="section-label">Who I Work With</div>
-            <h2 class="section-title light">If any of this sounds<br>painfully familiar.</h2>
-        </div>
-        <div class="audience-grid">
-            <div class="audience-item reveal">
-                <div class="audience-check">✓</div>
-                <div>
-                    <h4>Startups scaling faster than ops can keep up</h4>
-                    <p>Revenue is growing, headcount is climbing, and the back office is held together with Slack threads and goodwill.</p>
-                </div>
-            </div>
-            <div class="audience-item reveal reveal-delay-1">
-                <div class="audience-check">✓</div>
-                <div>
-                    <h4>Founders drowning in tasks with no system underneath</h4>
-                    <p>You're the bottleneck for hiring, onboarding, QA, reporting, and four other things that should not require you.</p>
-                </div>
-            </div>
-            <div class="audience-item reveal reveal-delay-2">
-                <div class="audience-check">✓</div>
-                <div>
-                    <h4>Teams running on Google Sheets and Slack chaos</h4>
-                    <p>Twelve spreadsheets, three sources of truth, none of them right. Decisions get made on whatever tab was open last.</p>
-                </div>
-            </div>
-            <div class="audience-item reveal reveal-delay-3">
-                <div class="audience-check">✓</div>
-                <div>
-                    <h4>Companies that need their first real ops hire</h4>
-                    <p>You don't need a COO yet. You need someone who can come in, install the systems, train the team, and hand it back clean.</p>
-                </div>
-            </div>
-        </div>
-        <div class="audience-cta reveal">
-            <p>If this sounds like your week,<br>let's fix the part that's costing you the most.</p>
-            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-                <a href="services.html" class="btn">See Services & Pricing →</a>
-                <a href="#contact" class="btn" style="background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.25);">Let's Talk</a>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- ========== CONTACT ========== -->
 <section class="contact" id="contact">
     <div class="container">
         <div class="contact-inner">
             <div class="reveal">
-                <div class="section-label">Get In Touch</div>
-                <h2 class="section-title dark">Let's work<br>together.</h2>
-                <p class="contact-info-text">Building something that's outgrowing your duct tape? Need an ops layer, an SOP-shaped lifeline, or someone to run the backend so you can focus on growth? Send me a message and I'll get back to you fast.</p>
+                <div class="section-label">Connect</div>
+                <h2 class="section-title dark">Get in touch.</h2>
+                <p class="contact-info-text">Content ops, SEO and AI search, or an internal tool you've been putting off. Tell me what you're dealing with and I'll say straight away if it's not something I should be taking on.</p>
                 <div class="contact-detail">
                     <div class="contact-detail-icon">✉</div>
                     <div>
                         <div class="contact-detail-label">Email</div>
-                        <div class="contact-detail-value">kpearl099@gmail.com</div>
+                        <div class="contact-detail-value"><a href="/cdn-cgi/l/email-protection#4d263d282c3f217d74740d2a202c2421632e2220"><span class="__cf_email__" data-cfemail="94ffe4f1f5e6f8a4adadd4f3f9f5fdf8baf7fbf9">[email&#160;protected]</span></a></div>
                     </div>
                 </div>
                 <div class="contact-detail">
                     <div class="contact-detail-icon">📍</div>
                     <div>
-                        <div class="contact-detail-label">Location</div>
-                        <div class="contact-detail-value">Negros Occidental, Philippines</div>
+                        <div class="contact-detail-label">Availability</div>
+                        <div class="contact-detail-value">Remote &middot; US business hours</div>
                     </div>
                 </div>
             </div>
@@ -4055,7 +4072,7 @@
                 <!-- FormSubmit config -->
                 <input type="hidden" name="_subject" value="New Portfolio Contact!">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="#">
+                <input type="hidden" name="_next" value="https://unwillingly-meekly-intense-nilgai.kitten.space/?sent=true">
                 <input type="text" name="_honey" style="display:none">
                 <div class="form-group">
                     <label class="form-label" for="name">Your Name</label>
@@ -4067,11 +4084,11 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="subject">Subject</label>
-                    <input class="form-input" type="text" id="subject" name="subject" placeholder="Let's talk about SEO..." required>
+                    <input class="form-input" type="text" id="subject" name="subject" placeholder="What's broken?" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="message">Message</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Give me the short version." required></textarea>
                 </div>
                 <button type="submit" class="form-submit">Send Message →</button>
             </form>
@@ -4082,18 +4099,12 @@
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
     <div class="container">
-        <p class="footer-text">© 2026 Karen Pearl Ong. Built with <span>♥</span> and lots of coffee.</p>
+        <p class="footer-text">© 2026 Karen Pearl Ong <span>·</span> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4e253e2b2f3c227e77770e29232f2722602d2123">[email&#160;protected]</a></p>
     </div>
 </footer>
 
-<!-- ========== LIGHTBOX ========== -->
-<div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">✕</button>
-    <img src="" alt="Expanded view" id="lightboxImg">
-</div>
-
 <!-- ========== JAVASCRIPT ========== -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Navigation scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -4110,7 +4121,10 @@
         link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 
-    // Scroll reveal
+    // Scroll reveal - only enable JS-driven hidden state if IntersectionObserver exists
+    if ('IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-reveal');
+    }
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -4121,72 +4135,100 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Work tabs
-    const tabs = document.querySelectorAll('.work-tab');
-    const categories = document.querySelectorAll('.work-category');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            const target = tab.getAttribute('data-tab');
-            categories.forEach(cat => cat.classList.remove('active'));
-            document.getElementById('tab-' + target).classList.add('active');
-            // Re-observe newly visible items for animation
-            document.querySelectorAll('#tab-' + target + ' .reveal').forEach(el => {
-                el.classList.remove('visible');
-                observer.observe(el);
-            });
-        });
-    });
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-    document.querySelectorAll('.zoomable').forEach(img => {
-        img.style.cursor = 'zoom-in';
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    const closeLightbox = () => {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
+    // Counter animation for highlights metrics
+    const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+    const animateCount = (el) => {
+        const target = parseFloat(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1600;
+        const start = performance.now();
+        const isInt = Number.isInteger(target);
+        const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = easeOutQuart(p);
+            const val = target * eased;
+            el.textContent = (isInt ? Math.round(val) : val.toFixed(1)) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
     };
-    lightbox.addEventListener('click', closeLightbox);
-    lightboxClose.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-    // Team member individual quotes
-    document.querySelectorAll('.team-member-chip.clickable').forEach(chip => {
-        chip.addEventListener('click', () => {
-            const team = chip.getAttribute('data-team');
-            const name = chip.getAttribute('data-name');
-            const quote = chip.getAttribute('data-quote');
-            const displayId = team === 'seo' ? 'seo-quote' : 'social-quote';
-            const display = document.getElementById(displayId);
-            const isOrange = team === 'social';
-
-            // Update selected state
-            chip.closest('.team-card').querySelectorAll('.team-member-chip.clickable').forEach(c => {
-                c.classList.remove('selected');
-            });
-            chip.classList.add('selected');
-
-            // Show individual quote
-            display.innerHTML = `
-                <div class="team-individual-quote ${isOrange ? 'orange' : ''}">
-                    <div class="team-q-name">${name}</div>
-                    <p class="team-q-text">"${quote}"</p>
-                </div>
-            `;
+    const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.counted) {
+                entry.target.dataset.counted = 'true';
+                animateCount(entry.target);
+            }
         });
-    });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
 
-    // Auto-click first member in each team on load
-    document.querySelector('[data-team="seo"].clickable')?.click();
-    document.querySelector('[data-team="social"].clickable')?.click();
+    // Subtle parallax on hero background blobs
+    const hero = document.getElementById('hero');
+    if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        let ticking = false;
+        const updateParallax = () => {
+            const y = window.scrollY;
+            if (y < window.innerHeight) {
+                hero.style.setProperty('--parallax-y', y * 0.3 + 'px');
+                hero.style.setProperty('--parallax-y-slow', y * 0.15 + 'px');
+            }
+            ticking = false;
+        };
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Mouse parallax on hero image
+        const heroImage = document.querySelector('.hero-image-container');
+        if (heroImage) {
+            hero.addEventListener('mousemove', (e) => {
+                const rect = hero.getBoundingClientRect();
+                const x = (e.clientX - rect.width / 2) / rect.width;
+                const y = (e.clientY - rect.height / 2) / rect.height;
+                heroImage.style.transform = `translate(${x * 12}px, ${y * 12}px)`;
+            });
+            hero.addEventListener('mouseleave', () => {
+                heroImage.style.transform = '';
+            });
+        }
+    }
+
+// ---- ?sent=true confirmation ----
+function initSentToast() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('sent') !== 'true') return;
+    var toast = document.getElementById('sentToast');
+    if (!toast) return;
+    var timer;
+    function hide() { clearTimeout(timer); toast.classList.remove('show'); }
+    toast.querySelector('button').addEventListener('click', hide);
+    setTimeout(function () {
+        toast.classList.add('show');
+        var contact = document.getElementById('contact');
+        if (contact) {
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            contact.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        }
+    }, 400);
+    timer = setTimeout(hide, 9000);
+    params.delete('sent');
+    var q = params.toString();
+    history.replaceState(null, '', window.location.pathname + (q ? '?' + q : ''));
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSentToast);
+} else {
+    initSentToast();
+}
 </script>
+<div class="sent-toast" id="sentToast" role="status" aria-live="polite">
+    <span class="sent-toast-dot" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+    <p>Message sent. I&rsquo;ll get back to you soon.</p>
+    <button type="button" aria-label="Dismiss">&times;</button>
+</div>
+
 </body>
 </html>
